@@ -5,20 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: 104.21.55.123
-  port: 2053
+  server: 188.114.98.0
+  port: 443
   udp: true
-  type: vless
-  uuid: 95de071f-747c-dc07-36ac-5c0854a9e50e
-  tls: true
-  servername: restless-boat-ebf2.moha102030.workers.dev
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /sync
-    headers:
-      Host: restless-boat-ebf2.moha102030.workers.dev
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
