@@ -15,7 +15,7 @@
         "server_name": "usa.oblaco.bet",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -39,42 +39,45 @@
     {
       "type": "vless",
       "tag": "🇨🇭 瑞士 (Switzerland) 03 - xiaohe",
-      "server": "151.242.2.81",
-      "server_port": 443,
-      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "server": "82.38.139.24",
+      "server_port": 8445,
+      "uuid": "c6f6ecc2-26af-4e2f-95a7-e7018819a716",
       "tls": {
         "enabled": true,
-        "server_name": "cf9.rumedia-cdn.com",
-        "insecure": false
+        "server_name": "hetzner.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "_UazRMiBq9RqMaVrHeLsvUuoBkGFo9Gm-A4ivuZ6ZS8",
+          "short_id": "6ba85179e30d4fc2"
+        }
       },
       "transport": {
-        "type": "ws",
-        "path": "/cdn/v3/live",
-        "headers": {
-          "Host": "cf9.rumedia-cdn.com"
-        }
+        "type": "grpc",
+        "service_name": "Google"
       }
     },
     {
       "type": "vless",
       "tag": "🇨🇭 瑞士 (Switzerland) 04 - xiaohe",
-      "server": "103.63.30.163",
+      "server": "138.124.9.108",
       "server_port": 443,
-      "uuid": "b2593749-691c-428c-9481-14979cba3446",
+      "uuid": "c795bdd5-0460-42bd-927b-fbff154d2ab5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "xi.tbv.ccwu.cc",
-        "insecure": false,
+        "server_name": "gag.fl2.iki-servers.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/proxyip=us.xiabibi.cf",
-        "headers": {
-          "Host": "xi.tbv.ccwu.cc"
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ssz8kvl1tH0TUaFREVSV_X-ED0AR-eeaWpKg2jQM8D8",
+          "short_id": ""
         }
       }
     },
