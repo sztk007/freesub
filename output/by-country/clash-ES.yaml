@@ -13,12 +13,12 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇪🇸 西班牙 (Spain) 02 - xiaohe
-  server: 108.181.121.226
+  server: 140.174.184.5
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
+  password: qItG8SueYQcP
 - name: 🇪🇸 西班牙 (Spain) 03 - xiaohe
   server: 212.227.235.66
   port: 2053
@@ -32,36 +32,28 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - name: 🇪🇸 西班牙 (Spain) 04 - xiaohe
-  server: 140.174.184.5
+  server: 108.181.121.226
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: qItG8SueYQcP
+  password: WSyL4XTwNsdv
 - name: 🇪🇸 西班牙 (Spain) 05 - xiaohe
-  server: 188.114.97.6
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇪🇸 西班牙 (Spain) 06 - xiaohe
-  server: assets-es.pleiades.codes
+  server: 66.163.118.73
   port: 443
   udp: true
-  type: vless
-  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: assets-es.pleiades.codes
+  servername: mygptagent.org
   skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: mygptagent.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,7 +64,6 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 03 - xiaohe
   - 🇪🇸 西班牙 (Spain) 04 - xiaohe
   - 🇪🇸 西班牙 (Spain) 05 - xiaohe
-  - 🇪🇸 西班牙 (Spain) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,6 +74,5 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 03 - xiaohe
   - 🇪🇸 西班牙 (Spain) 04 - xiaohe
   - 🇪🇸 西班牙 (Spain) 05 - xiaohe
-  - 🇪🇸 西班牙 (Spain) 06 - xiaohe
 rules:
 - MATCH,PROXIES
