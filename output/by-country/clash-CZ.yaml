@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
+  server: 172.67.167.77
+  port: 443
+  udp: true
+  type: vless
+  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
+  tls: true
+  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/6871nrbnl9WsdAiOUInt
+    headers:
+      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
   server: 85.117.235.50
   port: 443
   udp: true
@@ -17,14 +32,17 @@ proxies:
     short-id: 232b1b09e45325a4
   servername: cz1.animeteka.info
   client-fingerprint: ''
-- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
-  server: 153.76.190.41
-  port: 8443
+- name: 🇨🇿 捷克 (Czech) 03 - xiaohe
+  server: cz.monkora.org
+  port: 443
   udp: true
-  type: hysteria2
-  password: 3a92b39a-5f02-415e-a908-783ec320e83f
-  sni: speedtestmark.com
-  skip-cert-verify: true
+  type: vless
+  uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+  tls: true
+  reality-opts:
+    public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+  servername: example.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -32,6 +50,7 @@ proxy-groups:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
   - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -39,5 +58,6 @@ proxy-groups:
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
   - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
 rules:
 - MATCH,PROXIES
